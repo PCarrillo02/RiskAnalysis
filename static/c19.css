@@ -1,0 +1,195 @@
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+    background-color: #038A7D;
+    color: #FFFFFF;
+}
+
+nav .nav-link {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-family: "Times New Roman", Times, serif;
+    float: left;
+    vertical-align: middle;
+}
+
+nav {
+    background-color: #038A7D;
+    min-height: 40px;
+}
+
+main .form-control
+{
+    /* Center form controls */
+    display: inline-block;
+
+    /* Override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main .form-group {
+    font-family: "Times New Roman", Times, serif;
+}
+
+main
+{
+    /* Scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* Center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* Constrain images on small screens */
+    max-width: 100%;
+}
+
+.jumbotron {
+    background-image: url("https://www.cityofmonrovia.org/Home/ShowPublishedImage/9390/637194345629530000");
+    background-size: 100%;
+    color: #fff;
+    margin-bottom: 1rem;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-style: normal;
+    font-size: 50px;
+    font-family: "Times New Roman", Times, serif;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: "Times New Roman", Times, serif;
+    padding-bottom: 10px;
+    font-size: 25px;
+}
+
+nav #nav-sponsor {
+    float: right;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    color: #FFFFFF;
+    font-size: 10px;
+    vertical-align: text-bottom;
+}
+
+a.nav-link:hover {
+    font-weight: bold;
+    text-decoration: underline overline;
+}
+
+a.nav-link:active {
+    font-weight: bold;
+    text-decoration: underline overline;
+}
+
+.img {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border: 1px solid transparent;
+    margin-left: 1rem;
+}
+
+#map {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body .form-control
+{
+    /* Center form controls */
+    display: inline-block;
+
+    /* Override Bootstrap's 100% width for form controls */
+    width: auto;
+
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.btn {
+    border: 1px solid black;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.btn:hover {
+    background-color: lightgrey;
+}
+
+.red {
+    color: red;
+    text-align: center;
+    font-size: 35px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.green {
+    color: green;
+    text-align: center;
+    font-size: 35px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+h3 {
+    text-align: center;
+    font-size: 25px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 16px;
+    font-family: "Times New Roman", Times, serif;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+#border_wrap {
+    width: 100%;
+    height: 500px;
+    background-color: black;
+}
+
+.panel {
+    display: none;
+    transition: max-height 0.5s ease-out;
+    background-color: white;
+    padding: 0 18px;
+}
+
+.show {
+    display: block !important;
+}
+
+red {
+    color: red;
+}

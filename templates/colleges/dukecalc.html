@@ -1,0 +1,58 @@
+{% extends "c19layout.html" %}
+
+{% block title %}
+    Duke
+{% endblock %}
+
+{% block jumbo %}
+    <h1>Duke University</h1>
+    <div class = "img">
+        <a href="https://coronavirus.duke.edu/covid-testing/">
+            <img src = "https://upload.wikimedia.org/wikipedia/en/b/b6/Duke_University_Crest.svg" alt="Duke" align="right" style="width:50px;height: 60px;">
+        </a>
+    </div>
+{% endblock %}
+
+{% block body %}
+    <h3 style="text-align:left">Duke University Calculator</h3>
+    <hr>
+    <form action="/dukecalc" method="post">
+        <p style="text-align:center;font-family:Times New Roman, Times, serif"><strong><u>Instructions:</u></strong> Please estimate the values below (depending on your classroom location) to the best of your ability then click <strong><red>"Calculate"</red></strong>!</p>
+        <p style="text-align:center;font-family:Times New Roman, Times, serif"> ** To get the most up-to-date information regarding test, click on your institutions logo above to redirect you to your institution's COVID dashboard **</p>
+        <div class="form-group">
+            Number of New Positive Test:
+            <input autocomplete="off" autofocus class="form-control" name="positive" placeholder="Total Number of Positivity Test" type="number" step="0.01" min="0.00"/>
+            Total Number of Test Conducted:
+            <input autocomplete="off" autofocus class="form-control" name="total" placeholder="Total Number of Test" type="number" step="0.01" min="0.00"/>
+        </div>
+        <div class="form-group">
+            Classroom Dimensions (ft): Length
+            <input autocomplete="off" autofocus class="form-control" name="length" placeholder="Classroom Length" type="number" step="0.01" min="0.00"/>
+            Width
+            <input autocomplete="off" autofocus class="form-control" name="width" placeholder="Classroom Width" type="number" step="0.01" min="0.00"/>
+            Height
+            <input autocomplete="off" autofocus class="form-control" name="height" placeholder="Classroom Height" type="number" step="0.01" min="0.00"/>
+        </div>
+        <div class="form-group">
+            Length of time in class (hours):
+            <input autocomplete="off" autofocus class="form-control" name="time" placeholder="Class Time" type="number" step="0.01" min="0.00"/>
+        </div>
+        <div class="form-group">
+            Estimated number of students attending class:
+            <input autocomplete="off" autofocus class="form-control" name="students" placeholder="Students" type="number" step="0.01" min="0.00"/>
+        </div>
+        <div class="form-group">
+            Number of classes per semester:
+            <input autocomplete="off" autofocus class="form-control" name="classes" placeholder="Classes" type="number" step="0.01" min="0.00"/>
+        </div>
+        <div class="form-group">
+            <i>Optionally Include</i>: Air Exchange Rate (ACPH)
+            <input autocomplete="off" autofocus class="form-control" name="airex" placeholder="Air Exchange" type="number" step="0.01" min="0.00"/>
+            <i> Optionally Include</i>:Mask Filtration Efficiency
+            <input autocomplete="off" autofocus class="form-control" name="filtration" placeholder="Efficiency" type="number" step="0.01" min="0.00" max="1.00"/>
+        </div>
+        <div class="form-group">
+            <a href="/probability"><button class="btn btn-default" type="submit"><strong><red>Calculate</red></strong></button></a>
+        </div>
+    </form>
+{% endblock %}

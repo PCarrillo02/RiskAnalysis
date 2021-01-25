@@ -1,0 +1,54 @@
+{% extends "c19layout.html" %}
+
+{% block title %}
+    Caltech
+{% endblock %}
+
+{% block jumbo %}
+    <h1>California Institute of Technology</h1>
+    <div class = "img">
+        <img src = "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Seal_of_the_California_Institute_of_Technology.svg/1024px-Seal_of_the_California_Institute_of_Technology.svg.png" alt="Caltech" align="right" style="width:60px;height: 60px;">
+    </div>
+{% endblock %}
+
+{% block body %}
+    <h3 style="text-align:left">Caltech Calculator</h3>
+    <hr>
+    <form action="/caltechcalc" method="post">
+        <p style="text-align:center;font-family:Times New Roman, Times, serif"><strong><u>Instructions:</u></strong> Please input the positivity rate from your college's dashboard below <strong>for the Current Week</strong> then estimate the following values (depending on your classroom location) to the best of your ability and finally click <strong><red>"Calculate"</red></strong>!</p>
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ7JIAgR1Wcc5DqV86BSI2Yjv-u2Hcf9kgPBiFdSVgHs3D-sPFDFywufiIEgIcx9i7TReePL6uDCNr8/pubhtml?gid=0&widget=true&headers=false&chrome=false" height="250px" width="925" style="padding-bottom:20px"></iframe>
+        <div class="form-group">
+            Positivity Rate (%):
+            <input autocomplete="off" autofocus class="form-control" name="positivity" placeholder="Rate" type="number" step="0.01" min="0.00"/>
+        </div>
+        <div class="form-group">
+            Classroom Dimensions (ft): Length
+            <input autocomplete="off" autofocus class="form-control" name="length" placeholder="Classroom Length" type="number" step="0.01" min="0.00"/>
+            Width
+            <input autocomplete="off" autofocus class="form-control" name="width" placeholder="Classroom Width" type="number" step="0.01" min="0.00"/>
+            Height
+            <input autocomplete="off" autofocus class="form-control" name="height" placeholder="Classroom Height" type="number" step="0.01" min="0.00"/>
+        </div>
+        <div class="form-group">
+            Length of time in class (hours):
+            <input autocomplete="off" autofocus class="form-control" name="time" placeholder="Class Time" type="number" step="0.01" min="0.00"/>
+        </div>
+        <div class="form-group">
+            Estimated number of students attending class:
+            <input autocomplete="off" autofocus class="form-control" name="students" placeholder="Students" type="number" step="0.01" min="0.00"/>
+        </div>
+        <div class="form-group">
+            Number of classes per semester:
+            <input autocomplete="off" autofocus class="form-control" name="classes" placeholder="Classes" type="number" step="0.01" min="0.00"/>
+        </div>
+        <div class="form-group">
+            <i>Optionally Include</i>: Air Exchange Rate (ACPH)
+            <input autocomplete="off" autofocus class="form-control" name="airex" placeholder="Air Exchange" type="number" step="0.01" min="0.00"/>
+            <i>Optionally Include</i>: Mask Filtration Efficiency
+            <input autocomplete="off" autofocus class="form-control" name="filtration" placeholder="Efficiency" type="number" step="0.01"min="0.00" max="1.00"/>
+        </div>
+        <div class="form-group">
+            <a href="/probability"><button class="btn btn-default" type="submit"><strong><red>Calculate</red></strong></button></a>
+        </div>
+    </form>
+{% endblock %}

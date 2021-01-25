@@ -1,0 +1,16 @@
+{% extends "c19layout.html" %}
+
+{% block title %}
+    Apology
+{% endblock %}
+
+{% block jumbo %}
+    <h1>Error 400</h1>
+{% endblock %}
+
+{% block body %}
+    <!--<img alt="{{ top }}" class="border" src="http://memegen.link/custom/{{ top | urlencode }}/{{ bottom | urlencode }}.jpg?alt=https://i.imgur.com/CsCgN7Ll.png" title="{{ top }}">-->
+    <img style="margin-bottom:20px" alt="{{ top }}" class="border" src="static/CS50_Error.png" title="{{ top }}">
+    <hr>
+    <footer style="padding-bottom:50px;font-family:Times New Roman, Times, serif;" class="small text-center text-muted">** This site has been created as a project for CS50 Fall 2020 by Paola Carrillo and Rafael Trevino. Learn more about the creators here! **</footer>
+{% endblock %}

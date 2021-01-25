@@ -1,0 +1,31 @@
+{% extends "c19layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block jumbo %}
+    <h1>U.S. Universities vs. Global Pandemic</h1>
+{% endblock %}
+
+{% block body %}
+    <h3 style="text-align:left">About</h3>
+    <hr>
+    <p style="font-family: Times New Roman, Times, serif;text-align:left">
+        This tool is designed to estimate your probability of being infected with COVID-19 by attending class in person at the top 18 universities in the U.S. (according to U.S. News & World Report). You can also find plenty of general information about the COVID-19 pandemic and how to stay safe as well! On this site you can find:
+    </p>
+    <img src="https://www.studyfinds.org/wp-content/uploads/2020/07/AdobeStock_350474096-500x320.jpeg" style="float:right;padding-left:20px;padding-top:6px" height="256" width="400"> </img>
+    <li style="font-family:Times New Roman, Times, serif;text-align:left;padding-bottom:10px"><strong>Risk Calculator</strong> will help you find your infection probability and explain the underlying assumptions of the algorithm. All you need to do is be able to <u>estimate the dimensions of your classroom, the amount of time you will be in class, and the number of students who will likely attend class</u></li>
+    <li style="font-family:Times New Roman, Times, serif;text-align:left;padding-bottom:10px"><strong>University Policies</strong> where you can discover what the top universities in the U.S. are doing to protect their students on and off campus</li>
+    <li style="font-family:Times New Roman, Times, serif;text-align:left;padding-bottom:10px"><strong>CDC Guidelines</strong> works to provide a short summary of the best practices for safety during these times directly from the Center for Disease Control or CDC</li>
+    <li style="font-family:Times New Roman, Times, serif;text-align:left;padding-bottom:10px"><strong>Infection Probability</strong> will display your probability of infection <u>after you have utilized the Risk Calculator</u></li>
+    <p style="font-family: Times New Roman, Times, serif;text-align:left;color:red">See below to <strong>LEARN MORE</strong> about how the COVID-19 pandemic has affected the U.S. university student population</p>
+    <h3 style="text-align:left;padding-top:15px">Stories of the Pandemic: U.S. College Edition</h3>
+    <hr>
+    <iframe src="https://www.usnews.com/news/health-news/articles/2020-11-16/pandemic-pushes-steep-drop-in-foreign-college-students" scrolling="yes" frameborder="0" allowtransparency="true" title="How Colleges Became the New Covid Hot Spots" style="width:50%;height:500px;border:3px solid black" align="left"></iframe>
+    <iframe src="https://www.theatlantic.com/technology/archive/2020/10/college-was-never-about-education/616777/" scrolling="yes" frameborder="0" allowtransparency="true" title="America Will Sacrifice Anything for the College Experience" style="width:50%;height:500px;border:3px solid black" align="right"></iframe>
+    <iframe src="https://apnews.com/article/vermont-coronavirus-pandemic-protocols-e2722f84b42bd37e4a8d500f256c4415" scrolling="yes" frameborder="0" allowtransparency="true" title="US colleges mull new virus protocols for students’ return" style="width:50%;height:500px;border:3px solid black;margin-bottom:45px" align="left"></iframe>
+    <iframe src="https://www.npr.org/sections/health-shots/2020/11/14/933968091/a-college-students-coming-home-should-the-whole-family-wear-masks" scrolling="yes" frameborder="0" allowtransparency="true" title="A College Student Is Coming Home. Should The Whole Family Wear Masks?" style="width:50%;height:500px;border:3px solid black;margin-bottom:45px" align="right"></iframe>
+    <hr>
+    <footer style="padding-bottom:50px;font-family:Times New Roman, Times, serif;" class="small text-center text-muted">** This site has been created as a project for CS50 Fall 2020 by <a href="https://www.linkedin.com/in/paola-carrillo-gonzalez-87bb781a1/">Paola Carrillo Gonzalez</a> and <a href="https://www.linkedin.com/in/rafael-t-148425ba/">Rafael Trevino</a> **</footer>
+{% endblock %}

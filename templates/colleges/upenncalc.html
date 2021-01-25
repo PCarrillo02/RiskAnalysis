@@ -1,0 +1,54 @@
+{% extends "c19layout.html" %}
+
+{% block title %}
+    UPenn
+{% endblock %}
+
+{% block jumbo %}
+    <h1>University of Pennsylvania</h1>
+    <div class = "img">
+        <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/UPenn_shield_with_banner.svg/1024px-UPenn_shield_with_banner.svg.png" alt="UPenn" align="right" style="width:60px;height: 60px;">
+    </div>
+{% endblock %}
+
+{% block body %}
+    <h3 style="text-align:left">University of Pennsylvania Calculator</h3>
+    <hr>
+    <form action="/upenncalc" method="post">
+        <p style="text-align:center;font-family:Times New Roman, Times, serif"><strong><u>Instructions:</u></strong> Please estimate the values below (depending on your classroom location) to the best of your ability then click <strong><red>"Calculate"</red></strong>!</p>
+        <iframe style="margin-bottom:15px;border:1px solid black" width="1100" height="450" src="https://public.tableau.com/views/T1mockup/LastWeek?:embed=y&:showVizHome=no&:host_url=https%3A%2F%2Fpublic.tableau.com%2F&:embed_code_version=3&:tabs=no&:toolbar=yes&:animate_transition=yes&:display_static_image=no&:display_spinner=no&:display_overlay=yes&:display_count=yes&:language=en&:loadOrderID=0" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <div class="form-group">
+            Positivity Rate (%):
+            <input autocomplete="off" autofocus class="form-control" name="positivity" placeholder="Rate" type="number" step="0.01" min="0.00"/>
+        </div>
+        <div class="form-group">
+            Classroom Dimensions (ft): Length
+            <input autocomplete="off" autofocus class="form-control" name="length" placeholder="Classroom Length" type="number" step="0.01" min="0.00"/>
+            Width
+            <input autocomplete="off" autofocus class="form-control" name="width" placeholder="Classroom Width" type="number" step="0.01" min="0.00"/>
+            Height
+            <input autocomplete="off" autofocus class="form-control" name="height" placeholder="Classroom Height" type="number" step="0.01" min="0.00"/>
+        </div>
+        <div class="form-group">
+            Length of time in class (hours):
+            <input autocomplete="off" autofocus class="form-control" name="time" placeholder="Class Time" type="number" step="0.01" min="0.00"/>
+        </div>
+        <div class="form-group">
+            Estimated number of students attending class:
+            <input autocomplete="off" autofocus class="form-control" name="students" placeholder="Students" type="number" step="0.01" min="0.00"/>
+        </div>
+        <div class="form-group">
+            Number of classes per semester:
+            <input autocomplete="off" autofocus class="form-control" name="classes" placeholder="Classes" type="number" step="0.01" min="0.00"/>
+        </div>
+        <div class="form-group">
+            <i>Optionally Include</i>: Air Exchange Rate (ACPH)
+            <input autocomplete="off" autofocus class="form-control" name="airex" placeholder="Air Exchange" type="number" step="0.01" min="0.00"/>
+            <i>Optionally Include</i>: Mask Filtration Efficiency
+            <input autocomplete="off" autofocus class="form-control" name="filtration" placeholder="Efficiency" type="number" step="0.01"min="0.00" max="1.00"/>
+        </div>
+        <div class="form-group">
+            <a href="/probability"><button class="btn btn-default" type="submit"><strong><red>Calculate</red></strong></button></a>
+        </div>
+    </form>
+{% endblock %}
