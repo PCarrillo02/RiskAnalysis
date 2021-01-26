@@ -1,5 +1,6 @@
 # Import libraries and functions
 import time
+import os
 
 from cs50 import SQL
 from flask import Flask, redirect, render_template, request, abort, url_for
@@ -14,7 +15,7 @@ app = Flask(__name__)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
 # Configure CS50 Library to use SQLite database for tracking COVID-19 cases on all campuses
-db = SQL("sqlite:///unicases.db")
+db = SQL(os.getenv("/project/unicases.db"))
 
 
 @app.route("/")
