@@ -10,7 +10,6 @@ from cs50 import SQL
 from flask import Flask, redirect, render_template, request, session
 from flask_session import Session
 from werkzeug.exceptions import default_exceptions, HTTPException, InternalServerError
-from bs4 import BeautifulSoup
 from functions import apology
 
 
