@@ -15,7 +15,8 @@ app = Flask(__name__)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
 # Configure CS50 Library to use SQLite database for tracking COVID-19 cases on all campuses
-db = SQL(os.getenv("/project/unicases.db"))
+db = SQL(os.getenv("postgres://lpfouuwaqafeui:07dcb40ce387e67e079db019402d7b051177ffe6df0dfbae8c1521669d4e3770@ec2-54-205-187-125.compute-1.amazonaws.com:5432/dd6so4du63g3gl"
+))
 
 
 @app.route("/")
