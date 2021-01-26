@@ -80,7 +80,7 @@ def calc_v1():
     air_ex = list(db.execute("SELECT air_exchange FROM calculations"))
 
     # Actual Calculations
-   Dmask = 1 - (float(filtration_mask[0]["filtration_eff"]))
+    Dmask = 1 - (float(filtration_mask[0]["filtration_eff"]))
     volume = (length_cm * width_cm * height_cm) / 1000
 
     infected = float(students[0]["students"]) * float(positivity[0]["positivity"])/100
