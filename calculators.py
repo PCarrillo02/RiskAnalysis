@@ -5,6 +5,7 @@ import requests
 import io
 import re
 import numpy as np
+import os
 
 from cs50 import SQL
 from flask import Flask, redirect, render_template, request, session
