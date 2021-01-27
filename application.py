@@ -73,7 +73,7 @@ def brown():
         calc_v1()
 
         # Only render the infection probability if the form is submitted
-        return redirect("/probability", code=307)
+        return redirect("/probability")
 
     else:
         return render_template("colleges/browncalc.html")
@@ -89,7 +89,7 @@ def caltech():
         calc_v1()
 
         # Only render infection probability if this form is submitted
-        return redirect("/probability", code=307)
+        return redirect("/probability")
 
     else:
         return render_template("colleges/caltechcalc.html")
@@ -105,7 +105,7 @@ def columbia():
         calc_v1()
 
         # Only render the infection probability if the form is submitted
-        return redirect("/probability", code=307)
+        return redirect("/probability")
 
     else:
         return render_template("colleges/colcalc.html")
@@ -121,7 +121,7 @@ def cornell():
         calc_v1()
 
         # Only render infection probability if this form is submitted
-        return redirect("/probability", code=307)
+        return redirect("/probability")
 
     else:
         return render_template("colleges/corncalc.html")
@@ -137,7 +137,7 @@ def Dartmouth():
         calc_v1()
 
         # Only render infection probability if this form is submitted
-        return redirect("/probability", code=307)
+        return redirect("/probability")
 
     else:
         return render_template("colleges/dartcalc.html")
@@ -153,7 +153,7 @@ def duke():
         calc_v2()
 
         # Only render infection probability if this form is submitted
-        return redirect("/probability", code=307)
+        return redirect("/probability")
 
     else:
         return render_template("colleges/dukecalc.html")
@@ -185,7 +185,7 @@ def JohnsHopkins():
         calc_v2()
 
         # Only render infection probability if this form is submitted
-        return redirect("/probability", code=307)
+        return redirect("/probability")
 
     else:
         return render_template("colleges/jhucalc.html")
@@ -201,7 +201,7 @@ def mit():
         calc_v1()
 
         # Only render the infection probability if the form is submitted
-        return redirect("/probability", code=307)
+        return redirect("/probability")
 
     else:
         return render_template("colleges/mitcalc.html")
@@ -217,7 +217,7 @@ def northwestern():
         calc_v1()
 
         # Only render infection probability if this form is submitted
-        return redirect("/probability", code=307)
+        return redirect("/probability")
 
     else:
         return render_template("colleges/nwcalc.html")
@@ -233,7 +233,7 @@ def princeton():
         calc_v1()
 
         # Only render the infection probability if the form is submitted
-        return redirect("/probability", code=307)
+        return redirect("/probability")
 
     else:
         return render_template("colleges/princecalc.html")
@@ -249,7 +249,7 @@ def rice():
         calc_v1()
 
         # Only render infection probability if this form is submitted
-        return redirect("/probability", code=307)
+        return redirect("/probability")
 
     else:
         return render_template("colleges/ricecalc.html")
@@ -265,7 +265,7 @@ def stanford():
         calc_v1()
 
         # Only render infection probability if this form is submitted
-        return redirect("/probability", code=307)
+        return redirect("/probability")
 
     else:
         return render_template("colleges/stanfcalc.html")
@@ -281,7 +281,7 @@ def uchic():
         calc_v1()
 
         # Only render infection probability if this form is submitted
-        return redirect("/probability", code=307)
+        return redirect("/probability")
 
     else:
         return render_template("colleges/uchiccalc.html")
@@ -297,7 +297,7 @@ def upenn():
         calc_v1()
 
         # Only render infection probability if this form is submitted
-        return redirect("/probability", code=307)
+        return redirect("/probability")
 
     else:
         return render_template("colleges/upenncalc.html")
@@ -313,7 +313,7 @@ def vanderbilt():
         calc_v1()
 
         # Only render infection probability if this form is submitted
-        return redirect("/probability", code=307)
+        return redirect("/probability")
 
     else:
         return render_template("colleges/vandycalc.html")
@@ -329,7 +329,7 @@ def washu():
         calc_v1()
 
         # Only render infection probability if this form is submitted
-        return redirect("/probability", code=307)
+        return redirect("/probability")
 
     else:
         return render_template("colleges/washucalc.html")
@@ -345,7 +345,7 @@ def yale():
         calc_v2()
 
         # Only render the infection probability if the form is submitted
-        return redirect("/probability", code=307)
+        return redirect("/probability")
 
     else:
         return render_template("colleges/yalecalc.html")
