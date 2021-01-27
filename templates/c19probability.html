@@ -9,16 +9,15 @@
 {% endblock %}
 
 {% block body %}
-    {% set infection_2 = infection | float %}
 
-    {% if infection_2 < 1.0 %}
+    {% if infection < 1.0 %}
         <h3 style="padding-top: 90px">Your COVID-19 Infection Probability:</h3>
-        <div class="green" style="padding-bottom: 15px">{{ infection_2 }}%</div>
+        <div class="green" style="padding-bottom: 15px">{{ infection }}%</div>
         <a href="/policies"><button class="btn btn-default">Your College's COVID-19 Policies</button></a>
         <a href="/cdc"><button class="btn btn-default">Center for Disease Control (CDC) Guidelines</button></a>
     {% else %}
         <h3 style="padding-top: 90px">Your COVID-19 Infection Probability:</h3>
-        <div class="red" style="padding-bottom: 15px">{{ infection_2 }}%</div>
+        <div class="red" style="padding-bottom: 15px">{{ infection }}%</div>
         <a href="/policies"><button class="btn btn-default">Your College's COVID-19 Policies</button></a>
         <a href="/cdc"><button class="btn btn-default">Center for Disease Control (CDC) Guidelines</button></a>
     {% endif %}
