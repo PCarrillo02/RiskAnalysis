@@ -59,7 +59,7 @@ def calc_v1():
     db.execute("COMMIT")
 
     # Probability Calculation START
-    positivity = list(db.execute("SELECT positivity FROM calculations"))
+        positivity = list(db.execute("SELECT positivity FROM calculations"))
 
     # Setting Variables
     length_ft = list(db.execute("SELECT length FROM calculations"))
@@ -81,15 +81,15 @@ def calc_v1():
     air_ex = list(db.execute("SELECT air_exchange FROM calculations"))
 
     # Actual Calculations
-    Dmask = 1 - (float(filtration_mask[0]["filtration_eff"]))
+    Dmask = 1 - (filtration_mask[0]["filtration_eff"])
     volume = (length_cm * width_cm * height_cm) / 1000
 
-    infected = float(students[0]["students"]) * float(positivity[0]["positivity"])/100
+    infected = students[0]["students"] * (positivity[0]["positivity"])/100
     infected_exhaled = infected * 70 * Dmask
-    time_min = float(time[0]["time"]) * 60
+    time_min = time[0]["time"] * 60
     n = infected_exhaled / volume
 
-    Dhvac = math.exp((float(air_ex[0]["air_exchange"]) * -1 * float(time_min) / 60))
+    Dhvac = math.exp(-air_ex[0]["air_exchange"] * time_min / 60)
 
     time_list = list(range(0, int(time_min)))
 
@@ -100,7 +100,7 @@ def calc_v1():
 
         for i in range(0, minute):
             diff = time_list[minute] - i + 1
-            dilution = math.exp((float(air_ex[0]["air_exchange"]) * -1 * diff) / 60)
+            dilution = math.exp(-air_ex[0]["air_exchange"] * diff / 60)
             local_density = local_density + (n * dilution)
 
         local_n[minute] = local_density
@@ -181,15 +181,15 @@ def calc_v2():
     air_ex = list(db.execute("SELECT air_exchange FROM calculations"))
 
     # Actual Calculations
-    Dmask = 1 - (float(filtration_mask[0]["filtration_eff"]))
+    Dmask = 1 - (filtration_mask[0]["filtration_eff"])
     volume = (length_cm * width_cm * height_cm) / 1000
 
-    infected = float(students[0]["students"]) * float(positivity[0]["positivity"])/100
+    infected = students[0]["students"] * (positivity[0]["positivity"])/100
     infected_exhaled = infected * 70 * Dmask
-    time_min = float(time[0]["time"]) * 60
+    time_min = time[0]["time"] * 60
     n = infected_exhaled / volume
 
-    Dhvac = math.exp((float(air_ex[0]["air_exchange"]) * -1 * time_min) / 60)
+    Dhvac = math.exp((-air_ex[0]["air_exchange"]) * time_min / 60)
 
     time_list = list(range(0, int(time_min)))
 
@@ -200,7 +200,7 @@ def calc_v2():
 
         for i in range(0, minute):
             diff = time_list[minute] - i + 1
-            dilution = math.exp((float(air_ex[0]["air_exchange"]) * -1 * diff) / 60)
+            dilution = math.exp(-air_ex[0]["air_exchange"] * diff / 60)
             local_density = local_density + (n * dilution)
 
         local_n[minute] = local_density
