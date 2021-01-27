@@ -169,7 +169,7 @@ def harvard():
         calc_v1()
 
         # Only render the infection probability if the form is submitted
-        return redirect("/probability", code=307)
+        return redirect("/probability")
 
     else:
         return render_template("/colleges/harvcalc.html")
