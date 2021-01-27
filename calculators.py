@@ -59,7 +59,7 @@ def calc_v1():
     db.execute("COMMIT")
 
     # Probability Calculation START
-        positivity = list(db.execute("SELECT positivity FROM calculations"))
+    positivity = list(db.execute("SELECT positivity FROM calculations"))
 
     # Setting Variables
     length_ft = list(db.execute("SELECT length FROM calculations"))
