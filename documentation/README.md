@@ -1,14 +1,8 @@
 --- Infection Detection USERS MANUAL ---
 
-# OVERVIEW - https://youtu.be/wmuen3rjuoQ
+# OVERVIEW 
 
-Welcome to Infection Detection, where you can calculate the probability of COVID-19 infection in a given campus, in a given class, for a given semester. After downloading project.zip, open the zip file and upload the project folder
-into the CS50 IDE terminal. Once uploaded, direct the terminal into the project folder by running -- cd project -- into the terminal. This line on the terminal should then switch from -- ~/ $ -- to -- ~/project $ --.To first run
-the program, its important to change the document from whichFLASK is using to run the program. To begin opening the website, in the CS50 IDE terminal, type in -- export FLASK_APP=c19.py --. After that is run, nothing in the IDE
-will pop up, and that is okay. To actually open the website, type in -- flask run -- on the CS50 IDE, below the line from which you switched documentation files. This will render a link in the terminal
-to which you can then access the website.
-
-After clicking, you will arrive at our homepage which describes what you can find in the website. If you scroll down, you can actually find 4 news articles related to COVID-19 on college campuses. If you are on Google Chrome, some
+Welcome to Infection Detection, where you can calculate the probability of COVID-19 infection in a given campus, in a given class, for a given semester. You will arrive at our homepage which describes what you can find in the website. If you scroll down, you can actually find 4 news articles related to COVID-19 on college campuses. If you are on Google Chrome, some
 of these news articles will likely ask for you to sign in with a google account. Some articles such as "The Atlantic" and "AP" will also likely ask you to subscribe or sign up with an email to receive more articles.
 All of these messages can be ignored to read more of the articles.
 
@@ -41,14 +35,6 @@ using the infection constant for SARS-CoV-2 and this viral dose, we calculated t
 
 # SPECIFICATION
 
-1) Download the project.zip folder
-
-2) Run -- export FLASK_APP=c19.py -- in your terminal
-
-3) Run -- flask run -- and click the link in the terminal to reach the homepage
-
-When you look into the project folder you should see 3 folders (documentation, static, and templates), along with 3 python files (c19, calculators, and functions), and last a SQLite3 unicases database
-
 ## Documentation
 This folder contains a proposal folder for the documentation submitted to the CS50 staff for the proposal of this project and a status update on its completion submitted by the site creators. You will also see a file
 DESIGN.md describing the technical creation of the website, and last is this document.
@@ -62,7 +48,7 @@ for the website is seen next as c19.css file. Last is an image used in the CDC t
 This contains all HTML files to make the website work. First is a colleges folder that has the college calculator pages for each college supported by the site. Following this is the apology HTML rendered when the user
 commits an error 400. The rest of the files are the templates for each tab on the website and their design layout (c19layout.html).
 
-## c19.py
+## applications.py
 Main python file that controls website actions. You will mainly see the functions defined in calculators.py called here along with the proper functions to render or redirect the correct files based off the user
 inputs in the college calculator templates.
 
